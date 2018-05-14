@@ -1,0 +1,15 @@
+<footer class="btn-toolbar mt-2">
+  <button class="btn btn-primary mr-2"  (click)="onToggleAllTriggered()">Toggle All</button>
+  <button class="btn btn-primary mr-2">
+    {{itemCount <= 1 ? 'item' : 'items'}} <span class="badge badge-light">{{itemCount}}</span>
+    <span class="sr-only">unread messages</span>
+  </button>
+  <div class="btn-group mr-2">
+    <a class="btn btn-secondary" routerLink="/todo/ALL" routerLinkActive="active">All</a>
+    <a class="btn btn-secondary" routerLink="/todo/ACTIVE" routerLinkActive="active">Active</a>
+    <a class="btn btn-secondary" routerLink="/todo/COMPLETED" routerLinkActive="active">Completed</a>
+  </div>
+  <div class="btn-group">
+    <button class="btn btn-danger" (click)="onClearCompleted()">Clear completed</button>
+  </div>
+</footer>

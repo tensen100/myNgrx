@@ -1,0 +1,14 @@
+<a [routerLink]="['/books', id]">
+  <div class="card" style="width: 400px;">
+    <img *ngIf="thumbnail" class="card-img-top" [src]="thumbnail">
+    <div class="card-body">
+      <h5 class="card-title">{{title | ellipsis:35}}</h5>
+      <h5 class="card-subtitle mb-2 text-muted">{{subtitle | ellipsis:40}}</h5>
+      <p class="card-text">{{description | ellipsis}}</p>
+    </div>
+    <div class="card-footer">
+      <h5>Written By:</h5>
+      <span>{{authors | addCommas}}</span>
+    </div>
+  </div>
+</a>

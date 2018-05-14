@@ -14,7 +14,15 @@ const routes: Routes = [
   {
     path: 'pet',
     loadChildren: './pet/pet.module#PetModule'
+  },
+  {
+    path: 'todo',
+    loadChildren: './todo/todo.module#TodoModule'
   }
+  // {
+  //   path: 'books',
+  //   loadChildren: './books/books.module#BooksModule'
+  // }
 ];
 @NgModule({
   imports: [

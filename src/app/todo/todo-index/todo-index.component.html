@@ -1,0 +1,11 @@
+<app-todo-header
+  placeholder="What do you want"
+  (EnterUp)="add($event)"></app-todo-header>
+<app-todo-list
+  [todos]="todo$ | async"
+  (RemoveTodo)="removeTodo($event)"
+  (ToggleTodo)="toggleTodo($event)"></app-todo-list>
+<app-todo-footer
+  [itemCount]="(todo$ | async)?.length"
+  (Clear)="clearCompleted()"
+  (ToggleAll)="toggleAll()"></app-todo-footer>

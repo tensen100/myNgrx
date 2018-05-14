@@ -1,0 +1,7 @@
+<div (click)="toggle()">
+  <input type="checkbox" (click)="toggle()" [(ngModel)]="isChecked">
+  {{todoDesc}}
+  <button class="close"(click)="remove(); $event.stopPropagation()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
